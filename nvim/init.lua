@@ -3,7 +3,7 @@ require "mini.pick".setup()
 require "oil".setup()
 
 -- [[ LSP ]]
-vim.lsp.enable({ "clangd", "lua_ls", "marksman" })
+vim.lsp.enable({ "clangd", "lua_ls", "marksman", "pyrefly" })
 
 -- [[ Options ]]
 -- numbering
@@ -99,6 +99,7 @@ vim.keymap.set("n", "<leader>lg", ":Pick grep_live<CR>", { desc = "[l]ist [g]rep
 vim.keymap.set("n", "<leader>lb", ":Pick buffers<CR>", { desc = "[l]ist [b]uffers" })
 vim.keymap.set("n", "<leader>lh", ":Pick help<CR>", { desc = "[l]ist [h]elp" })
 vim.keymap.set("n", "<leader>fm", vim.lsp.buf.format, { desc = "[f]or[m]at current file" })
+vim.keymap.set("n", "<leader>db", vim.lsp.buf.hover, { desc = "[d]isplay [b]uffer" })
 
 -- easy terminal quit
 vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
